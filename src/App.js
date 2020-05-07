@@ -21,6 +21,7 @@ const useStyles = makeStyles({
 
 function App() {
   const [jokes, setJokes] = useState([])
+  const [jokesToShow, setJokesToShow] = useState([])
   const classes = useStyles()
 
   useEffect(() => {
