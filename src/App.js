@@ -5,9 +5,11 @@ function App() {
   return (
     <div className='App'>
       <CssBaseline>
-        <Typography variant='h1' align='center'>
-          Chuck Norris Jokes
-        </Typography>
+        <Container>
+          <Typography variant='h1' align='center'>
+            Chuck Norris Jokes
+          </Typography>
+        </Container>
       </CssBaseline>
     </div>
   )
