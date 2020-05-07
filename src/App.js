@@ -56,6 +56,11 @@ function App() {
           {jokesToShow.map((joke) => (
             <Card key={joke.id} className={classes.card}>
               <CardContent className={classes.cardContent}>
+                {joke.categories.length > 0 ? (
+                  joke.categories.map((cat) => <Chip label={cat} />)
+                ) : (
+                  <Chip label='regular' />
+                )}
                 <Typography>{joke.joke}</Typography>
               </CardContent>
               <CardActions className={classes.cardActions}>
