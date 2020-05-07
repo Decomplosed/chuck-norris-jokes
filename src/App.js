@@ -29,6 +29,7 @@ function App() {
       .then((res) => res.json())
       .then((res) => {
         setJokes(res.value)
+        setJokesToShow(res.value.slice(0, 10))
       })
       .catch((err) => console.log(err))
   }, [])
