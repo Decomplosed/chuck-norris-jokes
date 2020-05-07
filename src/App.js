@@ -14,7 +14,7 @@ const useStyles = makeStyles({
     marginBottom: 20,
   },
   cardContent: {
-    padding: '5px',
+    padding: '24px',
   },
 })
 
