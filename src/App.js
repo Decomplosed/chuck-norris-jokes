@@ -9,6 +9,13 @@ import {
 } from '@material-ui/core'
 
 function App() {
+  useEffect(() => {
+    fetch('https://api.icndb.com/jokes')
+      .then((res) => res.json())
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err))
+  }, [])
+
   return (
     <div className='App'>
       <CssBaseline>
