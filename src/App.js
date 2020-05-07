@@ -44,6 +44,14 @@ function App() {
               <CardContent className={classes.cardContent}>
                 <Typography>{joke.joke}</Typography>
               </CardContent>
+              <CardActions>
+                <Button variant='contained' color='primary'>
+                  Like
+                </Button>
+                <Button variant='contained' color='secondary'>
+                  Unlike
+                </Button>
+              </CardActions>
             </Card>
           ))}
         </Container>
