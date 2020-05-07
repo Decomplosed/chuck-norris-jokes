@@ -22,6 +22,14 @@ const useStyles = makeStyles({
   },
 })
 
+const likeJoke = (id) => {
+  console.log('Liking joke ', id)
+}
+
+const unlikeJoke = (id) => {
+  console.log('Unliking joke ', id)
+}
+
 function App() {
   const [jokes, setJokes] = useState([])
   const [jokesToShow, setJokesToShow] = useState([])
