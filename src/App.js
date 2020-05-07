@@ -20,6 +20,7 @@ const useStyles = makeStyles({
 
 function App() {
   const [jokes, setJokes] = useState([])
+  const classes = useStyles
 
   useEffect(() => {
     fetch('https://api.icndb.com/jokes')
