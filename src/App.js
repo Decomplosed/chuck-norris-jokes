@@ -57,9 +57,11 @@ function App() {
             <Card key={joke.id} className={classes.card}>
               <CardContent className={classes.cardContent}>
                 {joke.categories.length > 0 ? (
-                  joke.categories.map((cat) => <Chip label={cat} />)
+                  joke.categories.map((cat) => (
+                    <Chip label={cat} variant='outlined' />
+                  ))
                 ) : (
-                  <Chip label='regular' />
+                  <Chip label='regular' variant='outlined' />
                 )}
                 <Typography>{joke.joke}</Typography>
               </CardContent>
