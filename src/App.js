@@ -18,8 +18,8 @@ const useStyles = makeStyles({
     paddingBottom: 5,
   },
   cardActions: {
-    padding: '16px'
-  }
+    padding: '16px',
+  },
 })
 
 function App() {
@@ -50,10 +50,18 @@ function App() {
                 <Typography>{joke.joke}</Typography>
               </CardContent>
               <CardActions className={classes.cardActions}>
-                <Button variant='contained' color='primary'>
+                <Button
+                  variant='contained'
+                  color='primary'
+                  onClick={() => likeJoke(joke.id)}
+                >
                   Like
                 </Button>
-                <Button variant='contained' color='default'>
+                <Button
+                  variant='contained'
+                  color='default'
+                  onClick={() => unlikeJoke(joke.id)}
+                >
                   Unlike
                 </Button>
               </CardActions>
