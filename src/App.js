@@ -17,6 +17,9 @@ const useStyles = makeStyles({
   cardContent: {
     padding: '24px',
   },
+  cardActions: {
+    padding: '24px'
+  }
 })
 
 function App() {
