@@ -48,7 +48,7 @@ function App() {
                 <Button variant='contained' color='primary'>
                   Like
                 </Button>
-                <Button variant='contained' color='secondary'>
+                <Button variant='contained' color='default'>
                   Unlike
                 </Button>
               </CardActions>
