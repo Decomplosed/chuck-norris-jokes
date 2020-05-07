@@ -41,7 +41,7 @@ function App() {
           <Typography variant='h1' align='center'>
             Chuck Norris Jokes
           </Typography>
-          {jokes.map((joke) => (
+          {jokesToShow.map((joke) => (
             <Card key={joke.id} className={classes.card}>
               <CardContent className={classes.cardContent}>
                 <Typography>{joke.joke}</Typography>
