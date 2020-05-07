@@ -49,7 +49,7 @@ function App() {
               <CardContent className={classes.cardContent}>
                 <Typography>{joke.joke}</Typography>
               </CardContent>
-              <CardActions>
+              <CardActions className={classes.cardActions}>
                 <Button variant='contained' color='primary'>
                   Like
                 </Button>
