@@ -9,6 +9,15 @@ import {
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 
+const useStyles = makeStyles({
+  card: {
+    marginBottom: 20,
+  },
+  cardContent: {
+    padding: '5px',
+  },
+})
+
 function App() {
   const [jokes, setJokes] = useState([])
 
