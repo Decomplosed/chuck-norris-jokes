@@ -1,11 +1,13 @@
 import React from 'react'
-import { CssBaseline, Container } from '@material-ui/core'
+import { CssBaseline, Container, Typography } from '@material-ui/core'
 
 function App() {
   return (
     <div className='App'>
       <CssBaseline>
-        <h1>Jokes</h1>
+        <Typography variant='h1' align='center'>
+          Chuck Norris Jokes
+        </Typography>
       </CssBaseline>
     </div>
   )
