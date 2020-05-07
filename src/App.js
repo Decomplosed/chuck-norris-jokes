@@ -27,6 +27,13 @@ function App() {
           <Typography variant='h1' align='center'>
             Chuck Norris Jokes
           </Typography>
+          {jokes.map((joke) => (
+            <Card>
+              <CardContent>
+                <Typography>{joke.joke}</Typography>
+              </CardContent>
+            </Card>
+          ))}
         </Container>
       </CssBaseline>
     </div>
