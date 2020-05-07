@@ -29,7 +29,7 @@ function App() {
             Chuck Norris Jokes
           </Typography>
           {jokes.map((joke) => (
-            <Card>
+            <Card key={joke.id}>
               <CardContent>
                 <Typography>{joke.joke}</Typography>
               </CardContent>
