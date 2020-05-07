@@ -9,10 +9,14 @@ import {
 } from '@material-ui/core'
 
 function App() {
+  const [jokes, setJokes] = useState([])
+
   useEffect(() => {
     fetch('https://api.icndb.com/jokes')
       .then((res) => res.json())
-      .then((res) => console.log(res))
+      .then((res) => {
+        setJokes(res.value)
+      })
       .catch((err) => console.log(err))
   }, [])
 
