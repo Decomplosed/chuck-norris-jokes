@@ -58,10 +58,18 @@ function App() {
               <CardContent className={classes.cardContent}>
                 {joke.categories.length > 0 ? (
                   joke.categories.map((cat) => (
-                    <Chip label={cat} variant='outlined' />
+                    <Chip
+                      label={cat}
+                      variant='outlined'
+                      style={{ marginTop: 10, marginBottom: 10 }}
+                    />
                   ))
                 ) : (
-                  <Chip label='regular' variant='outlined' />
+                  <Chip
+                    label='regular'
+                    variant='outlined'
+                    style={{ marginTop: 10, marginBottom: 10 }}
+                  />
                 )}
                 <Typography>{joke.joke}</Typography>
               </CardContent>
