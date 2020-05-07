@@ -39,8 +39,8 @@ function App() {
             Chuck Norris Jokes
           </Typography>
           {jokes.map((joke) => (
-            <Card key={joke.id}>
-              <CardContent>
+            <Card key={joke.id} className={classes.card}>
+              <CardContent className={classes.cardContent}>
                 <Typography>{joke.joke}</Typography>
               </CardContent>
             </Card>
