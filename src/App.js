@@ -31,6 +31,13 @@ const unlikeJoke = (id) => {
   console.log('Unliking joke ', id)
 }
 
+const Category = withStyles({
+  root: {
+    marginTop: 10,
+    marginBottom: 10,
+  },
+})(Chip)
+
 function App() {
   const [jokes, setJokes] = useState([])
   const [jokesToShow, setJokesToShow] = useState([])
