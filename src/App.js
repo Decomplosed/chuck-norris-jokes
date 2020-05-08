@@ -23,16 +23,6 @@ const useStyles = makeStyles({
   },
 })
 
-const likeJoke = (id) => {
-  if (likedJokes.find((joke) => joke.id === id)) return
-  const likedJoke = likedJokes.find((joke) => joke.id === id)
-  setLikedJokes([likedJoke, ...likedJokes])
-}
-
-const unlikeJoke = (id) => {
-  console.log('Unliking joke ', id)
-}
-
 const Category = withStyles({
   root: {
     marginTop: 10,
@@ -43,7 +33,7 @@ const Category = withStyles({
 function App() {
   const [jokes, setJokes] = useState([])
   const [jokesToShow, setJokesToShow] = useState([])
-  const [likedJokes, setLokedJokes] = useState([])
+  const [likedJokes, setLikedJokes] = useState([])
 
   const classes = useStyles()
 
