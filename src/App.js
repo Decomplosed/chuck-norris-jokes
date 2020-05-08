@@ -47,6 +47,17 @@ function App() {
       .catch((err) => console.log(err))
   }, [])
 
+  const likeJoke = (id) => {
+    if (likedJokes.find((joke) => joke.id === id)) return
+    const likedJoke = likedJokes.find((joke) => joke.id === id)
+    setLikedJokes([likedJoke, ...likedJokes])
+  }
+
+  const unlikeJoke = (id) => {
+    likedJokes.filter((joke) => joke.id !== id)
+
+  }
+
   return (
     <div className='App'>
       <CssBaseline>
