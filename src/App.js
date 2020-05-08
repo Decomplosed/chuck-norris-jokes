@@ -24,7 +24,9 @@ const useStyles = makeStyles({
 })
 
 const likeJoke = (id) => {
-  console.log('Liking joke ', id)
+  if (likedJokes.find((joke) => joke.id === id)) return
+  const likedJoke = likedJokes.find((joke) => joke.id === id)
+  setLikedJokes([likedJoke, ...likedJokes])
 }
 
 const unlikeJoke = (id) => {
