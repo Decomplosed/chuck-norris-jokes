@@ -54,8 +54,8 @@ function App() {
   }
 
   const unlikeJoke = (id) => {
-    likedJokes.filter((joke) => joke.id !== id)
-
+    const newLikedJokes = likedJokes.filter((joke) => joke.id !== id)
+    setLikedJokes(newLikedJokes)
   }
 
   return (
