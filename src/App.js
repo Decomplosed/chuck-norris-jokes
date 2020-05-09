@@ -105,6 +105,9 @@ function App() {
               </Card>
             ))}
           </div>
+          <div role='tabpanel' hidden={currentTab !== 1}>
+            <h1>Likes</h1>
+          </div>
         </Container>
       </CssBaseline>
     </div>
