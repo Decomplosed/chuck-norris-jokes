@@ -62,6 +62,10 @@ function App() {
     setLikedJokes(newLikedJokes)
   }
 
+  const changeTab = (event, value) => {
+    setCurrentTab(value)
+  }
+
   return (
     <div className='App'>
       <CssBaseline>
