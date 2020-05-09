@@ -49,7 +49,7 @@ function App() {
 
   const likeJoke = (id) => {
     if (likedJokes.find((joke) => joke.id === id)) return
-    const likedJoke = likedJokes.find((joke) => joke.id === id)
+    const likedJoke = jokes.find((joke) => joke.id === id)
     setLikedJokes([likedJoke, ...likedJokes])
   }
 
