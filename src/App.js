@@ -73,7 +73,7 @@ function App() {
           <Typography variant='h1' align='center'>
             Chuck Norris Jokes
           </Typography>
-          <AppBar>
+          <AppBar position='sticky' style={{ marginBottom: 20 }} >
             <Tabs value={currentTab} onChange={changeTab}>
               <Tab label='Home' id='home-tab' aria-controls='home-panel' />
               <Tab label='Likes' id='like-tab' aria-controls='like-panel' />
