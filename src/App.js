@@ -73,37 +73,38 @@ function App() {
             <Tab label='Home' id='home-tab' aria-controls='home-panel' />
             <Tab label='Likes' id='like-tab' aria-controls='like-panel' />
           </Tabs>
-          <div role='tabpanel' hidden={currentTab !== 0}></div>
-          {jokesToShow.map((joke) => (
-            <Card key={joke.id} className={classes.card}>
-              <CardContent className={classes.cardContent}>
-                {joke.categories.length > 0 ? (
-                  joke.categories.map((cat) => (
-                    <Category label={cat} variant='outlined' />
-                  ))
-                ) : (
-                  <Category label='regular' variant='outlined' />
-                )}
-                <Typography>{joke.joke}</Typography>
-              </CardContent>
-              <CardActions className={classes.cardActions}>
-                <Button
-                  variant='contained'
-                  color='primary'
-                  onClick={() => likeJoke(joke.id)}
-                >
-                  Like
-                </Button>
-                <Button
-                  variant='contained'
-                  color='default'
-                  onClick={() => unlikeJoke(joke.id)}
-                >
-                  Unlike
-                </Button>
-              </CardActions>
-            </Card>
-          ))}
+          <div role='tabpanel' hidden={currentTab !== 0}>
+            {jokesToShow.map((joke) => (
+              <Card key={joke.id} className={classes.card}>
+                <CardContent className={classes.cardContent}>
+                  {joke.categories.length > 0 ? (
+                    joke.categories.map((cat) => (
+                      <Category label={cat} variant='outlined' />
+                    ))
+                  ) : (
+                    <Category label='regular' variant='outlined' />
+                  )}
+                  <Typography>{joke.joke}</Typography>
+                </CardContent>
+                <CardActions className={classes.cardActions}>
+                  <Button
+                    variant='contained'
+                    color='primary'
+                    onClick={() => likeJoke(joke.id)}
+                  >
+                    Like
+                  </Button>
+                  <Button
+                    variant='contained'
+                    color='default'
+                    onClick={() => unlikeJoke(joke.id)}
+                  >
+                    Unlike
+                  </Button>
+                </CardActions>
+              </Card>
+            ))}
+          </div>
         </Container>
       </CssBaseline>
     </div>
