@@ -73,7 +73,7 @@ function App() {
             <Tab label='Home' id='home-tab' aria-controls='home-panel' />
             <Tab label='Likes' id='like-tab' aria-controls='like-panel' />
           </Tabs>
-          <div role='tabpanel' hidden={}></div>
+          <div role='tabpanel' hidden={currentTab !== 0}></div>
           {jokesToShow.map((joke) => (
             <Card key={joke.id} className={classes.card}>
               <CardContent className={classes.cardContent}>
