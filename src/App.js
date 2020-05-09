@@ -68,6 +68,10 @@ function App() {
           <Typography variant='h1' align='center'>
             Chuck Norris Jokes
           </Typography>
+          <Tabs value={currentTab}>
+            <Tab label='Home' id='home-tab' aria-controls='home-panel' />
+            <Tab label='Likes' id='like-tab' aria-controls='like-panel' />
+          </Tabs>
           {jokesToShow.map((joke) => (
             <Card key={joke.id} className={classes.card}>
               <CardContent className={classes.cardContent}>
