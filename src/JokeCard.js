@@ -1,4 +1,11 @@
 import React from 'react'
+import {
+  Button,
+  Card,
+  CardContent,
+  CardActions,
+  Typography,
+} from '@material-ui/core'
 
 export default function JokeCard() {
   return (
