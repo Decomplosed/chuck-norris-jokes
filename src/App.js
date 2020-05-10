@@ -14,6 +14,8 @@ import {
 } from '@material-ui/core'
 import { makeStyles, withStyles } from '@material-ui/core/styles'
 
+import JokeCard from './JokeCard'
+
 const useStyles = makeStyles({
   card: {
     marginBottom: 20,
