@@ -83,6 +83,11 @@ function App() {
           </AppBar>
           <div role='tabpanel' hidden={currentTab !== 0}>
             {jokesToShow.map((joke) => (
+              <JokeCard key={joke.id} joke={joke} />
+            ))}
+          </div>
+          <div role='tabpanel' hidden={currentTab !== 1}>
+            {likedJokes.map((joke) => (
               <Card key={joke.id} className={classes.card}>
                 <CardContent className={classes.cardContent}>
                   {joke.categories.length > 0 ? (
