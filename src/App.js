@@ -61,13 +61,15 @@ function App() {
           </AppBar>
           <div role='tabpanel' hidden={currentTab !== 0}>
             {jokesToShow.map((joke, index) => {
-              ;<JokeCard
-                key={joke.id}
-                joke={joke}
-                likeJoke={likeJoke}
-                unlikeJoke={unlikeJoke}
-                index={index}
-              />
+              return (
+                <JokeCard
+                  key={joke.id}
+                  joke={joke}
+                  likeJoke={likeJoke}
+                  unlikeJoke={unlikeJoke}
+                  index={index}
+                />
+              )
             })}
           </div>
           <div role='tabpanel' hidden={currentTab !== 1}>
