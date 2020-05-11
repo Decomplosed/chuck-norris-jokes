@@ -35,7 +35,7 @@ export default function JokeCard({ joke, likeJoke, unlikeJoke }) {
       <CardContent className={classes.cardContent}>
         {joke.categories.length > 0 ? (
           joke.categories.map((cat) => (
-            <Category label={cat} variant='outlined' />
+            <Category key={cat} label={cat} variant='outlined' />
           ))
         ) : (
           <Category label='regular' variant='outlined' />
