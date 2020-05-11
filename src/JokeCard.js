@@ -6,10 +6,11 @@ import {
   CardActions,
   Typography,
 } from '@material-ui/core'
+import { makeStyles, withStyles } from '@material-ui/core'
 
-export default function JokeCard() {
+export default function JokeCard(props) {
   return (
-    <Card key={joke.id} className={classes.card}>
+    <Card className={classes.card}>
       <CardContent className={classes.cardContent}>
         {joke.categories.length > 0 ? (
           joke.categories.map((cat) => (
