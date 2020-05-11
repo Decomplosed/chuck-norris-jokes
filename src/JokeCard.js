@@ -8,7 +8,20 @@ import {
 } from '@material-ui/core'
 import { makeStyles, withStyles } from '@material-ui/core'
 
+const useStyles = makeStyles({
+  card: {
+    marginBottom: 20,
+  },
+  cardContent: {
+    paddingBottom: 5,
+  },
+  cardActions: {
+    padding: '16px',
+  },
+})
+
 export default function JokeCard(props) {
+  const classes = useStyles()
   return (
     <Card className={classes.card}>
       <CardContent className={classes.cardContent}>
