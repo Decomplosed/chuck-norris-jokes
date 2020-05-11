@@ -46,6 +46,8 @@ function App() {
     setCurrentTab(value)
   }
 
+  const observeElement = () => {}
+
   return (
     <div className='App'>
       <CssBaseline>
