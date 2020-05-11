@@ -30,7 +30,7 @@ function App() {
         observeElement()
       })
       .catch((err) => console.log(err))
-  }, [])
+  }, [observeElement])
 
   const likeJoke = (id) => {
     if (likedJokes.find((joke) => joke.id === id)) return
@@ -47,7 +47,9 @@ function App() {
     setCurrentTab(value)
   }
 
-  const observeElement = () => {
+  const observeElement = (bottomJoke) => {
+    if (bottomJoke === null) return
+    
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting === true) {
@@ -59,10 +61,15 @@ function App() {
       }
     )
 
-    const bottomJokeId = `joke-${jokesToShow.length - 1}`
-    const bottomJokeEl = document.getElementById(bottomJokeId)
-    observer.observe(bottomJokeEl)
+    observer.observe(bottomJoke)
   }
+
+  useEffect(() => {
+    const bottomJokeEl = document.getElementById(
+      `joke-${jokesToShow.length - 1}`
+    )
+    observeElement(bottomJokeEl)
+  }, [jokesToShow])
 
   return (
     <div className='App'>
