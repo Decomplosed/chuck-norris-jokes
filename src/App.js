@@ -75,6 +75,7 @@ function App() {
       `joke-${jokesToShow.length - 1}`
     )
     observeElement(bottomJokeEl)
+    // eslint-disable-next-line
   }, [jokesToShow])
 
   return (
