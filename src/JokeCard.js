@@ -5,6 +5,7 @@ import {
   CardContent,
   CardActions,
   Typography,
+  Chip,
 } from '@material-ui/core'
 import { makeStyles, withStyles } from '@material-ui/core'
 
