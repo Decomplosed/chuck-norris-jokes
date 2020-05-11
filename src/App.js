@@ -48,13 +48,16 @@ function App() {
     setCurrentTab(value)
   }
 
+  const addMoreJokes = () => {
+    setJokesToShow(jokes.slice(0, jokesToShow.length + 10))
+  }
+
   const observeElement = (bottomJoke) => {
-    if (bottomJoke === null) return
+    if (!bottomJoke) return
 
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting === true) {
-          console.log('Reached bottom of card')
         }
       },
       {
