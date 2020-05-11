@@ -30,7 +30,8 @@ function App() {
         observeElement()
       })
       .catch((err) => console.log(err))
-  }, [observeElement])
+    // eslint-disable-next-line
+  }, [])
 
   const likeJoke = (id) => {
     if (likedJokes.find((joke) => joke.id === id)) return
@@ -49,7 +50,7 @@ function App() {
 
   const observeElement = (bottomJoke) => {
     if (bottomJoke === null) return
-    
+
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting === true) {
