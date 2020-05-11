@@ -60,14 +60,15 @@ function App() {
             </Tabs>
           </AppBar>
           <div role='tabpanel' hidden={currentTab !== 0}>
-            {jokesToShow.map((joke) => (
-              <JokeCard
+            {jokesToShow.map((joke, index) => {
+              ;<JokeCard
                 key={joke.id}
                 joke={joke}
                 likeJoke={likeJoke}
                 unlikeJoke={unlikeJoke}
+                index={index}
               />
-            ))}
+            })}
           </div>
           <div role='tabpanel' hidden={currentTab !== 1}>
             {likedJokes.map((joke) => (
