@@ -17,15 +17,8 @@ import { makeStyles, withStyles } from '@material-ui/core/styles'
 import JokeCard from './JokeCard'
 
 const useStyles = makeStyles({
-  
-})
 
-const Category = withStyles({
-  root: {
-    marginTop: 10,
-    marginBottom: 10,
-  },
-})(Chip)
+})
 
 function App() {
   const [jokes, setJokes] = useState([])

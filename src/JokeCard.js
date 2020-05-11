@@ -20,6 +20,13 @@ const useStyles = makeStyles({
   },
 })
 
+const Category = withStyles({
+  root: {
+    marginTop: 10,
+    marginBottom: 10,
+  },
+})(Chip)
+
 export default function JokeCard(props) {
   const classes = useStyles()
   return (
