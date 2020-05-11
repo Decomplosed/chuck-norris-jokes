@@ -31,7 +31,7 @@ const Category = withStyles({
 export default function JokeCard({ joke, likeJoke, unlikeJoke, index }) {
   const classes = useStyles()
   return (
-    <Card className={classes.card}>
+    <Card className={classes.card} id={`joke-${index}`}>
       <CardContent className={classes.cardContent}>
         {joke.categories.length > 0 ? (
           joke.categories.map((cat) => (
