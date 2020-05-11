@@ -61,6 +61,7 @@ function App() {
 
     const bottomJokeId = `joke-${jokesToShow.length - 1}`
     const bottomJokeEl = document.getElementById(bottomJokeId)
+    observer.observe(bottomJokeEl)
   }
 
   return (
