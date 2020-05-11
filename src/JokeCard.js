@@ -28,7 +28,7 @@ const Category = withStyles({
   },
 })(Chip)
 
-export default function JokeCard(props) {
+export default function JokeCard({ joke, likeJoke, unlikeJoke }) {
   const classes = useStyles()
   return (
     <Card className={classes.card}>
