@@ -58,6 +58,8 @@ function App() {
         treshold: 1,
       }
     )
+
+    const bottomJokeId = `joke-${jokesToShow.length - 1}`
   }
 
   return (
