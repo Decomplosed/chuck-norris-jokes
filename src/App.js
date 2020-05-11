@@ -1,24 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import {
   AppBar,
-  Card,
-  CardContent,
-  CardActions,
-  Chip,
   CssBaseline,
   Container,
   Typography,
   Tab,
   Tabs,
-  Button,
 } from '@material-ui/core'
-import { makeStyles, withStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
 
 import JokeCard from './JokeCard'
 
-const useStyles = makeStyles({
-
-})
+const useStyles = makeStyles({})
 
 function App() {
   const [jokes, setJokes] = useState([])
