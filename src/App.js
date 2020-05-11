@@ -47,7 +47,18 @@ function App() {
     setCurrentTab(value)
   }
 
-  const observeElement = () => {}
+  const observeElement = () => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting === true) {
+          console.log('Reached bottom of card')
+        }
+      },
+      {
+        treshold: 1,
+      }
+    )
+  }
 
   return (
     <div className='App'>
