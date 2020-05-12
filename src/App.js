@@ -119,7 +119,14 @@ function App() {
             {categories.map((cat) => (
               <FormControlLabel
                 key={cat}
-                control={<Checkbox name={cat} color='primary' />}
+                control={
+                  <Checkbox
+                    name={cat}
+                    color='primary'
+                    checked={filterCategories.includes(category)}
+                    onChange={toggleCategory}
+                  />
+                }
                 label={cat}
               />
             ))}
