@@ -102,6 +102,15 @@ function App() {
     // eslint-disable-next-line
   }, [jokesToShow])
 
+  const toggleCategory = (event) => {
+    const category = event.target.name
+
+    if (filterCategories.includes(category)) {
+      const filterCategoriesCopy = [...filterCategories]
+      const categoryIndex = filterCategoriesCopy.indexOf(category)
+    }
+  }
+
   return (
     <div className='App'>
       <CssBaseline>
