@@ -27,6 +27,7 @@ function App() {
   const [jokesToShow, setJokesToShow] = useState([])
   const [likedJokes, setLikedJokes] = useState([])
   const [currentTab, setCurrentTab] = useState(0)
+  const [loading, setLoading] = useState(false)
 
   const classes = useStyles()
 
