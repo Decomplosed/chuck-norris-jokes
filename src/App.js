@@ -25,6 +25,7 @@ function Spinner() {
 function App() {
   const [jokes, setJokes] = useState([])
   const [jokesToShow, setJokesToShow] = useState([])
+  const [categories, setCategories] = useState([])
   const [likedJokes, setLikedJokes] = useState([])
   const [currentTab, setCurrentTab] = useState(0)
   const [loading, setLoading] = useState(false)
