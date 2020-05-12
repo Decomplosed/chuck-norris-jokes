@@ -48,6 +48,7 @@ function App() {
       .then((res) => res.json())
       .then((res) => {
         setCategories(res.value)
+        setFilterCategories(res.value)
       })
       .catch((err) => console.log(err))
   }, [])
