@@ -112,6 +112,7 @@ function App() {
                 />
               )
             })}
+            {loading && <Spinner />}
           </div>
           <div role='tabpanel' hidden={currentTab !== 1}>
             {likedJokes.map((joke) => (
