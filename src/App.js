@@ -31,6 +31,7 @@ function App() {
   const [likedJokes, setLikedJokes] = useState([])
   const [currentTab, setCurrentTab] = useState(0)
   const [loading, setLoading] = useState(false)
+  const [filterCategories, setFilterCategories] = useState([])
 
   const classes = useStyles()
 
