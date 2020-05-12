@@ -38,10 +38,15 @@ function App() {
       .then((res) => {
         setJokes(res.value)
         setJokesToShow(res.value.slice(0, 10))
-        observeElement()
       })
       .catch((err) => console.log(err))
-    // eslint-disable-next-line
+
+    fetch('https://api.icndb.com/categories')
+      .then((res) => res.json())
+      .then((res) => {
+        setCategories(res.value)
+      })
+      .catch((err) => console.log(err))
   }, [])
 
   const likeJoke = (id) => {
