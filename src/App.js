@@ -114,6 +114,15 @@ function App() {
             </Tabs>
           </AppBar>
           <div role='tabpanel' hidden={currentTab !== 0}>
+            {/* {Categories filters} */}
+            {categories.map((cat) => (
+              <FormControlLabel
+                key={cat}
+                control={<Checkbox name={cat} color='primary' />}
+                label={cat}
+              />
+            ))}
+            {/* {Joke cards} */}
             {jokesToShow.map((joke, index) => {
               return (
                 <JokeCard
