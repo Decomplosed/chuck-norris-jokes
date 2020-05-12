@@ -73,6 +73,7 @@ function App() {
       (entries) => {
         if (entries[0].isIntersecting === true) {
           addMoreJokes()
+          observer.unobserve(bottomJoke)
         }
       },
       {
