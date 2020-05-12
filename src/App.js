@@ -59,7 +59,11 @@ function App() {
   }
 
   const addMoreJokes = () => {
-    setJokesToShow(jokes.slice(0, jokesToShow.length + 10))
+    setLoading(true)
+    setTimeout(() => {
+      setJokesToShow(jokes.slice(0, jokesToShow.length + 10))
+      setLoading(false)
+    }, 400)
   }
 
   const observeElement = (bottomJoke) => {
