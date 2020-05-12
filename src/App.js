@@ -108,6 +108,7 @@ function App() {
     if (filterCategories.includes(category)) {
       const filterCategoriesCopy = [...filterCategories]
       const categoryIndex = filterCategoriesCopy.indexOf(category)
+      filterCategories.splice(categoryIndex, 1)
     }
   }
 
