@@ -95,7 +95,7 @@ function App() {
     <div className='App'>
       <CssBaseline>
         <Container>
-          <Typography variant='h1' align='center'>
+          <Typography variant='h3' align='center' style={{ margin: '20px' }}>
             Chuck Norris Jokes
           </Typography>
           <AppBar position='sticky' style={{ marginBottom: 20 }}>
