@@ -14,6 +14,14 @@ import JokeCard from './JokeCard'
 
 const useStyles = makeStyles({})
 
+function Spinner() {
+  return (
+    <div style={{ textAlign: 'center', padding: '2rem' }}>
+      <CircularProgress />
+    </div>
+  )
+}
+
 function App() {
   const [jokes, setJokes] = useState([])
   const [jokesToShow, setJokesToShow] = useState([])
