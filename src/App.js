@@ -137,7 +137,7 @@ function App() {
                   <Checkbox
                     name={cat}
                     color='primary'
-                    checked={filterCategories.includes(category)}
+                    checked={filterCategories.includes(cat)}
                     onChange={toggleCategory}
                   />
                 }
