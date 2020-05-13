@@ -146,7 +146,7 @@ function App() {
     return false
   }
 
-  const changeName = () => {
+  const changeName = (e) => {
     if (firstName === '' || lastName === '') return
     fetchAndSetJokes()
   }
