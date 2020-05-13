@@ -191,7 +191,7 @@ function App() {
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
               />
-              <Button type='submit' color='primary'>
+              <Button type='submit' variant='contained' color='primary'>
                 Submit
               </Button>
             </form>
