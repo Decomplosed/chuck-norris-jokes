@@ -34,6 +34,7 @@ function App() {
   const [currentTab, setCurrentTab] = useState(0)
   const [loading, setLoading] = useState(false)
   const [filterCategories, setFilterCategories] = useState([])
+  const [firstName, setFirstName] = useState('')
 
   const classes = useStyles()
 
