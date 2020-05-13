@@ -178,23 +178,25 @@ function App() {
             </Tabs>
           </AppBar>
           <div role='tabpanel' hidden={currentTab !== 0}>
-            <form onSubmit={changeName} noValidate className={classes.form}>
-              <TextField
-                id='firstName'
-                label='First Name'
-                value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}
-              />
-              <TextField
-                id='lastName'
-                label='First Name'
-                value={lastName}
-                onChange={(e) => setLastName(e.target.value)}
-              />
-              <Button type='submit' variant='contained' color='primary'>
-                Submit
-              </Button>
-            </form>
+            <div>
+              <form onSubmit={changeName} noValidate className={classes.form}>
+                <TextField
+                  id='firstName'
+                  label='First Name'
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                />
+                <TextField
+                  id='lastName'
+                  label='First Name'
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                />
+                <Button type='submit' variant='contained' color='primary'>
+                  Submit
+                </Button>
+              </form>
+            </div>
             {/* {Categories filters} */}
             {categories.map((cat) => (
               <FormControlLabel
