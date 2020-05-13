@@ -167,7 +167,7 @@ function App() {
             </Tabs>
           </AppBar>
           <div role='tabpanel' hidden={currentTab !== 0}>
-            <form onSubmit={changeName} noValidate>
+            <form onSubmit={changeName} noValidate className={classes.form}>
               <TextField
                 id='firstName'
                 label='First Name'
