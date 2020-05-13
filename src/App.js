@@ -147,6 +147,7 @@ function App() {
   }
 
   const changeName = (e) => {
+    e.preventDefault()
     if (firstName === '' || lastName === '') return
     fetchAndSetJokes()
   }
