@@ -151,7 +151,7 @@ function App() {
             </Tabs>
           </AppBar>
           <div role='tabpanel' hidden={currentTab !== 0}>
-            <form>
+            <form onSubmit={changeName}>
               <TextField
                 id='firstName'
                 label='First Name'
