@@ -178,7 +178,13 @@ function App() {
             </Tabs>
           </AppBar>
           <div role='tabpanel' hidden={currentTab !== 0}>
-            <div>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+              }}
+            >
               <form onSubmit={changeName} noValidate className={classes.form}>
                 <TextField
                   id='firstName'
