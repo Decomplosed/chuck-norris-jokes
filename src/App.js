@@ -135,6 +135,11 @@ function App() {
     return false
   }
 
+  const changeName = () => {
+    if (firstName === '' || lastName === '') return
+    fetchAndSetJokes()
+  }
+
   return (
     <div className='App'>
       <CssBaseline>
