@@ -24,7 +24,7 @@ const useStyles = makeStyles({
     justifyContent: 'center',
     '& > *': {
       margin: 15,
-      width: '25ch',
+      width: '30ch',
     },
   },
 })
