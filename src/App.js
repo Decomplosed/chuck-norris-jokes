@@ -35,6 +35,7 @@ function App() {
   const [loading, setLoading] = useState(false)
   const [filterCategories, setFilterCategories] = useState([])
   const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
 
   const classes = useStyles()
 
