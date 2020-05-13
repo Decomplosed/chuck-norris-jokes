@@ -115,6 +115,13 @@ function App() {
     }
   }
 
+  const categoryMatch = (jokeCategories) => {
+    for(let i=0; i < jokeCategories.length; i++) {
+      if(filterCategories.includes(jokeCategories[i])) return true
+    }
+    return false
+  }
+
   return (
     <div className='App'>
       <CssBaseline>
