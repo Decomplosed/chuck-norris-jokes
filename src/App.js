@@ -16,7 +16,13 @@ import { makeStyles } from '@material-ui/core/styles'
 
 import JokeCard from './JokeCard'
 
-const useStyles = makeStyles({})
+const useStyles = makeStyles({
+  form: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+})
 
 function Spinner() {
   return (
