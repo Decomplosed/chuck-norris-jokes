@@ -47,18 +47,19 @@ function App() {
       .then((res) => {
         setCategories(res.value)
         setFilterCategories(res.value)
+        setLoading(false)
       })
       .catch((err) => console.log(err))
   }, [])
 
   const fetchAndSetJokes = () => {
     fetch('https://api.icndb.com/jokes')
-    .then((res) => res.json())
-    .then((res) => {
-      setJokes(res.value)
-      setJokesToShow(res.value.slice(0, 10))
-    })
-    .catch((err) => console.log(err))
+      .then((res) => res.json())
+      .then((res) => {
+        setJokes(res.value)
+        setJokesToShow(res.value.slice(0, 10))
+      })
+      .catch((err) => console.log(err))
   }
 
   const likeJoke = (id) => {
