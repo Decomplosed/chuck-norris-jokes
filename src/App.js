@@ -151,6 +151,14 @@ function App() {
             </Tabs>
           </AppBar>
           <div role='tabpanel' hidden={currentTab !== 0}>
+            <form>
+              <TextField
+                id='firstName'
+                label='First Name'
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+              />
+            </form>
             {/* {Categories filters} */}
             {categories.map((cat) => (
               <FormControlLabel
