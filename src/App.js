@@ -133,7 +133,7 @@ function App() {
           <AppBar position='sticky' style={{ marginBottom: 20 }}>
             <Tabs value={currentTab} onChange={changeTab} centered>
               <Tab label='Home' id='home-tab' aria-controls='home-panel' />
-              <Tab label='Likes' id='like-tab' aria-controls='like-panel' />
+              <Tab label={<Badge />} id='like-tab' aria-controls='like-panel' />
             </Tabs>
           </AppBar>
           <div role='tabpanel' hidden={currentTab !== 0}>
