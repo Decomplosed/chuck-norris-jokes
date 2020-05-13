@@ -40,6 +40,7 @@ function App() {
   const classes = useStyles()
 
   useEffect(() => {
+    fetchAndSetJokes()
     fetch('https://api.icndb.com/categories')
       .then((res) => res.json())
       .then((res) => {
