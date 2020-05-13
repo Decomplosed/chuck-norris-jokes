@@ -26,6 +26,9 @@ const useStyles = makeStyles({
       margin: 15,
       width: '30ch',
     },
+    '& > button': {
+      width: '15ch',
+    },
   },
 })
 
