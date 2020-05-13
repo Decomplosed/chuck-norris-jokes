@@ -153,7 +153,7 @@ function App() {
             ))}
             {/* {Joke cards} */}
             {jokesToShow.map((joke, index) => {
-              if (categoryMatch(joke.categories)) {
+              if (joke.categories.length === 0 || categoryMatch(joke.categories)) {
                 return (
                   <JokeCard
                     key={joke.id}
