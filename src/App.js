@@ -50,10 +50,13 @@ function App() {
         setLoading(false)
       })
       .catch((err) => console.log(err))
+    // eslint-disable-next-line
   }, [])
 
   const fetchAndSetJokes = () => {
-    fetch('https://api.icndb.com/jokes')
+    fetch(
+      `https://api.icndb.com/jokes?firstName=${firstName}&lastName=${lastName}`
+    )
       .then((res) => res.json())
       .then((res) => {
         setJokes(res.value)
