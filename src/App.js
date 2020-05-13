@@ -187,6 +187,9 @@ function App() {
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
               />
+              <Button type='submit' color='primary'>
+                Submit
+              </Button>
             </form>
             {/* {Categories filters} */}
             {categories.map((cat) => (
