@@ -153,15 +153,17 @@ function App() {
             ))}
             {/* {Joke cards} */}
             {jokesToShow.map((joke, index) => {
-              return (
-                <JokeCard
-                  key={joke.id}
-                  joke={joke}
-                  likeJoke={likeJoke}
-                  unlikeJoke={unlikeJoke}
-                  index={index}
-                />
-              )
+              if (categoryMatch(joke.categories)) {
+                return (
+                  <JokeCard
+                    key={joke.id}
+                    joke={joke}
+                    likeJoke={likeJoke}
+                    unlikeJoke={unlikeJoke}
+                    index={index}
+                  />
+                )
+              }
             })}
             {loading && <Spinner />}
           </div>
