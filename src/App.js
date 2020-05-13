@@ -158,6 +158,12 @@ function App() {
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
               />
+              <TextField
+                id='lastName'
+                label='First Name'
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+              />
             </form>
             {/* {Categories filters} */}
             {categories.map((cat) => (
