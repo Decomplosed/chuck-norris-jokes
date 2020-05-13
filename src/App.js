@@ -34,8 +34,8 @@ function App() {
   const [currentTab, setCurrentTab] = useState(0)
   const [loading, setLoading] = useState(false)
   const [filterCategories, setFilterCategories] = useState([])
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
+  const [firstName, setFirstName] = useState('Chuck')
+  const [lastName, setLastName] = useState('Norris')
 
   const classes = useStyles()
 
