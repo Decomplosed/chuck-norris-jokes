@@ -40,14 +40,6 @@ function App() {
   const classes = useStyles()
 
   useEffect(() => {
-    fetch('https://api.icndb.com/jokes')
-      .then((res) => res.json())
-      .then((res) => {
-        setJokes(res.value)
-        setJokesToShow(res.value.slice(0, 10))
-      })
-      .catch((err) => console.log(err))
-
     fetch('https://api.icndb.com/categories')
       .then((res) => res.json())
       .then((res) => {
@@ -56,6 +48,16 @@ function App() {
       })
       .catch((err) => console.log(err))
   }, [])
+
+  const fetchAndSetJokes = () => {
+    fetch('https://api.icndb.com/jokes')
+    .then((res) => res.json())
+    .then((res) => {
+      setJokes(res.value)
+      setJokesToShow(res.value.slice(0, 10))
+    })
+    .catch((err) => console.log(err))
+  }
 
   const likeJoke = (id) => {
     if (likedJokes.find((joke) => joke.id === id)) return
