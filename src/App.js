@@ -58,6 +58,7 @@ function App() {
       .then((res) => {
         setJokes(res.value)
         setJokesToShow(res.value.slice(0, 10))
+        setLoading(false)
       })
       .catch((err) => console.log(err))
   }
